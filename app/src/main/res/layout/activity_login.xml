@@ -4,63 +4,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/grad"
     tools:context=".Login">
+
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="534dp"
         android:layout_marginBottom="150dp"
+        android:background="@drawable/btn_rounded"
         android:text="Login"
+        android:textColor="#9EF376"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
 
     <EditText
         android:id="@+id/emailInput"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="300dp"
+        android:layout_height="50sp"
+        android:background="@drawable/up_rounded"
         android:ems="10"
-        android:hint="Email"
         android:gravity="center"
+        android:hint="Email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#545657"
+        app:layout_constraintBottom_toTopOf="@+id/passwordInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="250dp"
+        android:layout_height="50sp"
+        android:layout_marginTop="434dp"
+        android:layout_marginBottom="248dp"
+        android:background="@drawable/down_rounded"
         android:ems="10"
         android:gravity="center"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textColor="#545657"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:text="Don't have an account?\nRegister by clicking HERE"
+        android:layout_marginTop="14dp"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Don't have an account?\nRegister by clicking HERE"
+        android:textColor="#102b00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="323dp"
         android:layout_height="269dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="425dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19999999"
         app:srcCompat="@drawable/wastent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,15 +47,13 @@ public class Main extends AppCompatActivity {
                 String customerWasteCollected = dataSnapshot.child("wasteCollected").getValue().toString();
                 String customerMoneyAchieved = dataSnapshot.child("moneyAchieved").getValue().toString();
                 tvUserName.setText(customerName);
-                tvWasteCollected.setText(customerWasteCollected);
-                tvMoneyExchanged.setText(customerMoneyAchieved);
+                tvWasteCollected.setText(customerWasteCollected + " kg");
+                tvMoneyExchanged.setText("Rp. " + customerMoneyAchieved + ".00-");
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(Main.this, "You are not a User", Toast.LENGTH_SHORT).show();
-                Intent intToLoginFailed = new Intent(Main.this, Login.class);
-                startActivity(intToLoginFailed);
+                databaseError.getMessage();
             }
         });
 
