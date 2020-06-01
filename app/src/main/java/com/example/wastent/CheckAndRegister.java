@@ -94,14 +94,14 @@ public class CheckAndRegister extends AppCompatActivity {
                         else {
                             mFirebaseUser = task.getResult().getUser();
                             String userUID = mFirebaseUser.getUid();
-                            dbRef.setValue(userUID);
-                            dbRef.child(userUID).child("email").setValue(customerEmail);
-                            dbRef.child(userUID).child("name").setValue(customerName);
-                            dbRef.child(userUID).child("address").setValue(customerAddress);
-                            dbRef.child(userUID).child("phoneNumber").setValue(customerPhoneNumber);
-                            dbRef.child(userUID).child("gender").setValue(customerGender);
-                            dbRef.child(userUID).child("wasteCollected").setValue(0);
-                            dbRef.child(userUID).child("moneyAchieved").setValue(0);
+                            DatabaseReference newDbRef = dbRef.child(userUID);
+                            newDbRef.child("email").setValue(customerEmail);
+                            newDbRef.child("name").setValue(customerName);
+                            newDbRef.child("address").setValue(customerAddress);
+                            newDbRef.child("phoneNumber").setValue(customerPhoneNumber);
+                            newDbRef.child("gender").setValue(customerGender);
+                            newDbRef.child("wasteCollected").setValue(0);
+                            newDbRef.child("moneyAchieved").setValue(0);
                             Intent intToLogin = new Intent(CheckAndRegister.this, Login.class);
                             startActivity(intToLogin);
                         }
