@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -24,6 +25,7 @@ public class Main extends AppCompatActivity {
     FirebaseAuth mFirebaseAuth;
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference dbRef;
+    ImageView btnRefresh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class Main extends AppCompatActivity {
         btnLogOut = findViewById(R.id.btnLogout);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
+        btnRefresh = findViewById(R.id.imageView6);
 
         dbRef = mFirebaseDatabase.getReference().child("users").child(mFirebaseUser.getUid());
 
@@ -63,6 +66,14 @@ public class Main extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 Intent intToLogin = new Intent(Main.this, Login.class);
                 startActivity(intToLogin);
+            }
+        });
+
+        btnRefresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent refresh = new Intent(Main.this, Main.class);
+                startActivity(refresh);
             }
         });
     }

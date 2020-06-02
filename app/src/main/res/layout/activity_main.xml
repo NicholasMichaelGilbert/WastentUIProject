@@ -37,44 +37,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textWasteCollected"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="You Have Collected"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/totalWasteCollected"
-        app:layout_constraintStart_toEndOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/totalWasteCollected"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="403dp"
-        android:layout_marginBottom="300dp"
-        android:gravity="left"
-        android:text="Waste Collected"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="339dp"
-        android:layout_marginEnd="296dp"
-        android:layout_marginRight="296dp"
-        android:layout_marginBottom="286dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/trash" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="100dp"
@@ -88,25 +50,63 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:srcCompat="@drawable/cash" />
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="691dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnLogout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/refresh" />
+
     <TextView
-        android:id="@+id/textMoneyExchanged2"
+        android:id="@+id/textWasteCollected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="495dp"
-        android:layout_marginBottom="215dp"
-        android:gravity="left"
-        android:text="Available"
+        android:text="You Have Collected"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/totalWasteCollected"
+        app:layout_constraintStart_toEndOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/totalWasteCollected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="458dp"
+        android:layout_marginBottom="243dp"
+        android:gravity="left"
+        android:text="Waste Collected"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/totalMoneyExchanged"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="404dp"
+        android:layout_marginEnd="296dp"
+        android:layout_marginRight="296dp"
+        android:layout_marginBottom="229dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trash" />
 
     <TextView
         android:id="@+id/totalMoneyExchanged"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="488dp"
-        android:layout_marginBottom="215dp"
+        android:layout_marginTop="543dp"
+        android:layout_marginBottom="158dp"
         android:gravity="left"
         android:text="Money Exchanged"
         android:textSize="24sp"
@@ -122,6 +122,21 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/totalMoneyExchanged"
         app:layout_constraintStart_toEndOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textMoneyExchanged2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="552dp"
+        android:layout_marginBottom="157dp"
+        android:gravity="left"
+        android:text="Available"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/totalMoneyExchanged"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView4"
