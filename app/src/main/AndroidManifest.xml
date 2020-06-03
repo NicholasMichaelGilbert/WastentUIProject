@@ -3,6 +3,7 @@
     package="com.example.wastent">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,12 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".UserManual"></activity>
+        <activity android:name=".PrivacyPolicy" />
+        <activity android:name=".TermsOfService" />
+        <activity android:name=".Verify" />
+        <activity android:name=".ChangeUserPassword" />
+        <activity android:name=".OptionActivity" />
         <activity android:name=".CheckAndRegister" />
         <activity android:name=".AddIdentity" />
         <activity android:name=".Register" />
         <activity android:name=".Login">
             <intent-filter>
-                <action android:name="android.intent.action.Login" />
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

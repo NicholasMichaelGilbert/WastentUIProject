@@ -1,0 +1,33 @@
+We want you to understand how the Waste'nt app collects, uses, and shares information about you when you use our application, and other online products and services. This is done for the cause of making a better product and giving a much better service for the future as well.
+
+I.	What we Collect
+
+Account information. To create an account, you must provide a username and password. Your username is public, and it doesn't have to be related to your real name. You may also provide an email address. We also store your user account preferences and settings.
+
+The amount of waste you submit. When submitting the waste, the amount will be tracked and analyzed for future uses
+
+Log and usage data. We may log information when you access and use the Services. This may include your IP address, user-agent string, browser type, operating system, referral URLs, device information (e.g., device IDs), pages visited, links clicked, the requested URL, hardware settings, and search terms. Except for the IP address used to create your account, Waste'nt will delete any IP addresses collected after 100 days.
+
+Location information. We may receive and process information about your location. For example, with your consent, we may collect information about the specific location of your mobile device (for example, by using GPS or Bluetooth). We may also receive location information from you when you choose to share such information on our Services, including by associating your content with a location, or we may derive your approximate location from other information about you, including your IP address.
+
+II.	How we use the information about you
+
+We use information about you to:
+-	Provide, maintain, and improve the Services;
+-	Research and develop new services;
+-	Send you technical notices, updates, security alerts, invoices and other support and administrative messages;
+-	Provide customer service;
+-	Monitor and analyze trends, usage, and activities in connection with our Services; and
+-	Personalize the Services and provide advertisements, content and features that match user profiles or interests. 
+III.	How Information about you is shared
+
+When you use the Services, certain information may be shared with other users and the public. For example:
+-	When you submit plastic waste, the total amount will be analyzed and be sent for the government for the circular economy act. 
+-	When you are one of the top contributors, other users will be able to see your profile and all the information regarding your activities on the services such as your username, etc.
+
+IV.	Other Information
+
+We take measures to help protect information about you from loss, theft, misuse and unauthorized access, disclosure, alteration, and destruction. For example, we use HTTPS while information is being transmitted. We also enforce technical and administrative access controls to limit which of our employees have access to non-public personal information.
+
+V.	Contact Us
+If you have further questions regarding this privacy policy, please contact us at wastent2020@gmail.com

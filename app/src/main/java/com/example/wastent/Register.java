@@ -36,6 +36,10 @@ public class Register extends AppCompatActivity {
                     etRegisterPassword.setError("Please Enter Password");
                     etRegisterPassword.requestFocus();
                 }
+                else if (!(etRegisterPassword.equals("^[a-zA-Z0-9]+$"))) {
+                    etRegisterPassword.setError("Password is not alpha-numeric");
+                    etRegisterPassword.requestFocus();
+                }
                 else if (email.isEmpty() && password.isEmpty()) {
                     etRegisterEmail.setError("Please Enter Email");
                     etRegisterEmail.requestFocus();

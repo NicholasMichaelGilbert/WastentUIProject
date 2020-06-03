@@ -1,0 +1,8 @@
+
+	If all the credentials you entered are correct, then you can press yes this is me then you can press the sign me up button.  If there are some mistakes, you can press no something is wrong to fix it.
+	f.	Once everything is done, the app will redirect you to the login page, and you can enter your user login credentials
+
+
+II.	Accessing an account
+	a.	Open the application
+	b.	Enter the credentials at the main login page

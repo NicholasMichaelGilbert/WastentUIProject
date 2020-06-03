@@ -11,59 +11,49 @@
         android:id="@+id/imageView4"
         android:layout_width="205dp"
         android:layout_height="189dp"
-        android:layout_marginTop="97dp"
-        android:layout_marginBottom="449dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26"
+        app:layout_constraintVertical_bias="0.07999998"
         app:srcCompat="@drawable/wastent" />
 
     <TextView
         android:id="@+id/staticRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="338dp"
-        android:layout_marginBottom="364dp"
         android:text="Lets start with how you Log in"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/staticRegister2" />
 
     <TextView
         android:id="@+id/staticRegister3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
         android:text="Please fill in your email and password"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/register_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/staticRegister" />
 
     <EditText
         android:id="@+id/register_email"
         android:layout_width="wrap_content"
         android:layout_height="50sp"
-        android:layout_marginTop="421dp"
-        android:layout_marginBottom="264dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/up_rounded"
         android:ems="10"
         android:gravity="center"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintTop_toBottomOf="@+id/staticRegister3" />
 
     <EditText
         android:id="@+id/register_password"
@@ -83,27 +73,25 @@
         android:id="@+id/buttonNext"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="552dp"
-        android:layout_marginBottom="135dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/btn_rounded"
         android:text="NEXT"
         android:textColor="#9EF376"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintTop_toBottomOf="@+id/register_password" />
 
     <TextView
         android:id="@+id/staticRegister2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="Welcome to Wasten't"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/staticRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,8 +11,6 @@
         android:id="@+id/staticAddIdentity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="103dp"
-        android:layout_marginBottom="598dp"
         android:text="Tell us more about yourself"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.17000002" />
+        app:layout_constraintVertical_bias="0.110000014" />
 
     <EditText
         android:id="@+id/addIdentity_name"
@@ -32,41 +30,38 @@
         android:hint="Name"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/addIdentity_phoneNumber"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
 
     <EditText
         android:id="@+id/addIdentity_phoneNumber"
         android:layout_width="250sp"
         android:layout_height="50sp"
-        android:layout_marginTop="218dp"
-        android:layout_marginBottom="465dp"
         android:background="#ffffff"
         android:ems="10"
         android:gravity="center"
         android:hint="Phone Number"
         android:inputType="phone"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/addIdentity_address"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35000002" />
+        app:layout_constraintTop_toBottomOf="@+id/addIdentity_name" />
 
     <RadioGroup
         android:id="@+id/genderPick"
         android:layout_width="79dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="428dp"
-        android:layout_marginBottom="229dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/staticGender">
 
         <RadioButton
             android:id="@+id/gender_male"
@@ -110,8 +105,6 @@
         android:id="@+id/buttonNext2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="160dp"
         android:background="@drawable/btn_rounded"
         android:text="Next"
         android:textColor="#9EF376"
@@ -119,17 +112,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genderPick" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
 
     <TextView
         android:id="@+id/staticGender"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
-        android:layout_marginBottom="22dp"
         android:text="Are you a male or female?"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/genderPick"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55" />
 </androidx.constraintlayout.widget.ConstraintLayout>

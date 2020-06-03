@@ -1,0 +1,2 @@
+
+Enter your old password and new password twice then you will be prompted to re-login.

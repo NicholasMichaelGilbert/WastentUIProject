@@ -11,14 +11,14 @@
         android:id="@+id/staticCheckAndRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="67dp"
+        android:layout_marginTop="5dp"
         android:gravity="center"
         android:text="Is this you?"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/checkAndRegister_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkAndRegister_name" />
 
     <TextView
         android:id="@+id/staticEmail"
@@ -26,29 +26,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="142dp"
-        android:layout_marginBottom="566dp"
         android:gravity="left"
         android:text="Email"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22000003" />
 
     <TextView
         android:id="@+id/checkAndRegister_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="142dp"
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
-        android:layout_marginBottom="566dp"
         android:gravity="right"
         android:text="User Email"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.22000003" />
 
     <TextView
         android:id="@+id/staticPassword"
@@ -59,6 +57,7 @@
         android:layout_marginTop="15dp"
         android:gravity="left"
         android:text="Password"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/staticEmail" />
 
@@ -71,7 +70,7 @@
         android:layout_marginRight="60dp"
         android:gravity="right"
         android:text="User Password"
-        android:textSize="15sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkAndRegister_email" />
 
@@ -79,8 +78,6 @@
         android:id="@+id/checkAndRegister_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="656dp"
         android:gravity="center"
         android:text="User Name"
         android:textSize="25sp"
@@ -89,7 +86,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.060000002" />
+        app:layout_constraintVertical_bias="0.06999999" />
 
     <TextView
         android:id="@+id/staticPhoneNumber"
@@ -100,7 +97,7 @@
         android:layout_marginTop="15dp"
         android:gravity="left"
         android:text="Phone Number"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/staticPassword" />
 
@@ -113,7 +110,7 @@
         android:layout_marginRight="60dp"
         android:gravity="right"
         android:text="User Phone Number"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkAndRegister_password" />
 
@@ -126,7 +123,7 @@
         android:layout_marginTop="15dp"
         android:gravity="left"
         android:text="Gender"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/staticPhoneNumber" />
 
@@ -139,7 +136,7 @@
         android:layout_marginRight="60dp"
         android:gravity="right"
         android:text="User Gender"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkAndRegister_phoneNumber" />
 
@@ -152,7 +149,7 @@
         android:layout_marginTop="15dp"
         android:gravity="left"
         android:text="Address"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/staticGender" />
 
@@ -165,7 +162,7 @@
         android:layout_marginRight="60dp"
         android:gravity="right"
         android:text="User Address"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkAndRegister_gender" />
 
@@ -173,23 +170,20 @@
         android:id="@+id/staticAreYouSure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="375dp"
-        android:layout_marginBottom="337dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="Are You Sure?"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintTop_toBottomOf="@+id/checkAndRegister_address" />
 
     <Button
         android:id="@+id/buttonYes"
         android:layout_width="205dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/grad_tri"
         android:text="Yes this is me"
         app:layout_constraintEnd_toEndOf="parent"
@@ -212,13 +206,14 @@
         android:id="@+id/buttonRegister"
         android:layout_width="205dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
         android:background="@drawable/btn_rounded"
         android:text="Sign me up!"
         android:textColor="#9EF376"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonNo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

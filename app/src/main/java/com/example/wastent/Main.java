@@ -3,9 +3,9 @@ package com.example.wastent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,27 +19,31 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Main extends AppCompatActivity {
-    ImageView btnSettings;
+    ImageView ivOption;
     TextView tvUserName, tvWasteCollected, tvMoneyExchanged;
     FirebaseUser mFirebaseUser;
     FirebaseAuth mFirebaseAuth;
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference dbRef;
-    ImageView btnRefresh;
+    ImageView ivRefresh;
+    String userPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent userCredential = getIntent();
+        userPassword = userCredential.getStringExtra("userPassword");
+
         mFirebaseAuth = FirebaseAuth.getInstance();
         tvUserName = findViewById(R.id.username);
         tvWasteCollected = findViewById(R.id.totalWasteCollected);
         tvMoneyExchanged = findViewById(R.id.totalMoneyExchanged);
-        btnSettings = findViewById(R.id.imageView7);
+        ivOption = findViewById(R.id.imageViewOption);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
-        btnRefresh = findViewById(R.id.imageView6);
+        ivRefresh = findViewById(R.id.imageViewRefresh);
 
         dbRef = mFirebaseDatabase.getReference().child("users").child(mFirebaseUser.getUid());
 
@@ -56,20 +60,22 @@ public class Main extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                databaseError.getMessage();
+                Toast.makeText(Main.this, "You are not a user", Toast.LENGTH_SHORT).show();
+                Intent intToLoginFailed = new Intent(Main.this, Login.class);
+                startActivity(intToLoginFailed);
             }
         });
 
-        btnSettings.setOnClickListener(new View.OnClickListener() {
+        ivOption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                Intent intToLogin = new Intent(Main.this, Login.class);
-                startActivity(intToLogin);
+                Intent intToOptions = new Intent(Main.this, OptionActivity.class);
+                intToOptions.putExtra("userPassword", userPassword);
+                startActivity(intToOptions);
             }
         });
 
-        btnRefresh.setOnClickListener(new View.OnClickListener() {
+        ivRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent refresh = new Intent(Main.this, Main.class);

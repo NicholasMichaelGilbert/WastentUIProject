@@ -51,13 +51,13 @@
         app:srcCompat="@drawable/cash" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageViewRefresh"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewOption"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/refresh" />
 
@@ -175,7 +175,7 @@
     <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageViewOption"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"

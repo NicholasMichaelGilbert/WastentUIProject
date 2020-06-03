@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String email = etEmailId.getText().toString();
-                String password = etPassId.getText().toString();
+                final String password = etPassId.getText().toString();
 
                 if (email.isEmpty()) {
                     etEmailId.setError("Please Enter Email");
@@ -65,9 +65,17 @@ public class Login extends AppCompatActivity {
                                 Toast.makeText(Login.this, "Login Failed, Please Enter the Right Email or Password", Toast.LENGTH_SHORT).show();
                             }
                             else {
-                                Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                Intent intToHome = new Intent(Login.this, Main.class);
-                                startActivity(intToHome);
+                                mFirebaseUser = task.getResult().getUser();
+                                if (mFirebaseUser.isEmailVerified()) {
+                                    Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                    Intent intToHome = new Intent(Login.this, Main.class);
+                                    intToHome.putExtra("userPassword", password);
+                                    startActivity(intToHome);
+                                }
+                                else {
+                                    Toast.makeText(Login.this, "You Are Not Verified Yet, Please Verify Your Account by Checking Your Email", Toast.LENGTH_SHORT).show();
+                                    FirebaseAuth.getInstance().signOut();
+                                }
                             }
                         }
                     });

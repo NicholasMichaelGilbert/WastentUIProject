@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -93,6 +94,13 @@ public class CheckAndRegister extends AppCompatActivity {
                         }
                         else {
                             mFirebaseUser = task.getResult().getUser();
+                            UserProfileChangeRequest profileUpdate = new UserProfileChangeRequest.Builder().setDisplayName(customerName).build();
+                            mFirebaseUser.updateProfile(profileUpdate).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+
+                                }
+                            });
                             String userUID = mFirebaseUser.getUid();
                             DatabaseReference newDbRef = dbRef.child(userUID);
                             newDbRef.child("email").setValue(customerEmail);
@@ -102,8 +110,13 @@ public class CheckAndRegister extends AppCompatActivity {
                             newDbRef.child("gender").setValue(customerGender);
                             newDbRef.child("wasteCollected").setValue(0);
                             newDbRef.child("moneyAchieved").setValue(0);
-                            Intent intToLogin = new Intent(CheckAndRegister.this, Login.class);
-                            startActivity(intToLogin);
+                            mFirebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    Intent intToVerify = new Intent(CheckAndRegister.this, Verify.class);
+                                    startActivity(intToVerify);
+                                }
+                            });
                         }
                     }
                 });
