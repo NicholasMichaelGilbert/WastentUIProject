@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Main extends AppCompatActivity {
-    Button btnLogOut;
+    ImageView btnSettings;
     TextView tvUserName, tvWasteCollected, tvMoneyExchanged;
     FirebaseUser mFirebaseUser;
     FirebaseAuth mFirebaseAuth;
@@ -36,7 +36,7 @@ public class Main extends AppCompatActivity {
         tvUserName = findViewById(R.id.username);
         tvWasteCollected = findViewById(R.id.totalWasteCollected);
         tvMoneyExchanged = findViewById(R.id.totalMoneyExchanged);
-        btnLogOut = findViewById(R.id.btnLogout);
+        btnSettings = findViewById(R.id.imageView7);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mFirebaseUser = mFirebaseAuth.getCurrentUser();
         btnRefresh = findViewById(R.id.imageView6);
@@ -60,7 +60,7 @@ public class Main extends AppCompatActivity {
             }
         });
 
-        btnLogOut.setOnClickListener(new View.OnClickListener() {
+        btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();

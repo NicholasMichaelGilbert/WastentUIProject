@@ -52,14 +52,12 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="40dp"
-        android:layout_height="41dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="691dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnLogout"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/refresh" />
 
@@ -163,12 +161,28 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/pp" />
 
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
+    <!--    <Button-->
+    <!--        android:id="@+id/btnLogout"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:layout_marginEnd="5dp"-->
+    <!--        android:textColor="#9EF376"-->
+    <!--        android:layout_marginRight="5dp"-->
+    <!--        android:background="@drawable/btn_rounded"-->
+    <!--        android:text="Logout"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="50dp"
         android:layout_height="50dp"
-        android:text="Logout"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/option" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
